@@ -1,0 +1,95 @@
+body{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100vh;
+    background: #45011A;
+}
+.container{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+}
+.circle{
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    border-radius: 50%;
+    background-color: #DFB793;
+    left: 15px;
+    transform-origin: 50%;
+    animation: circle .5s alternate infinite ease;
+}
+@keyframes circle{
+    0%{
+        top: 60px;
+        height: 5px;
+        border-radius: 50px 50px 25px 25px;
+        transform: scaleX(1.7);
+    }
+    40%{
+        height: 20px;
+        border-radius: 50%;
+        transform: scaleX(1);
+    }
+    100%{
+        top: 0%;
+    }
+}
+.circle:nth-child(2){
+    left: 75px;
+    animation-delay: .2s;
+}
+.circle:nth-child(3){
+    left: 135px;
+    animation-delay: .3s;
+}
+.shadow{
+    width: 20px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: rgba(220,91,81,.5);
+    position: absolute;
+    top: 65px;
+    transform-origin: 50%;
+    z-index: -1;
+    left: 12%;
+    filter: blur(1px);
+    animation: shadow .5s alternate infinite ease;
+}
+@keyframes shadow{
+    0%{
+        transform: scaleX(1.8);
+    }
+    40%{
+        transform: scaleX(1);
+        opacity: .7;
+    }
+    100%{
+        transform: scaleX(.2);
+        opacity: .4;
+        
+
+    }
+}
+.shadow:nth-child(5){
+    left: 85px;
+    right: 13%;
+    animation-delay: .3s;
+}
+.shadow:nth-child(6){
+    left: 145px;
+    right: 15%;
+    animation-delay: .2s;
+}
+.heading{
+    color: white;
+    position: relative;
+    top: -140px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 50px;
+    
+}
